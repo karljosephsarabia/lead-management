@@ -24,7 +24,7 @@ export function AddLeadForm({ handleFormSubmit }: { handleFormSubmit: () => void
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
-            const response = await fetch("http://localhost:4000/api/leads", {
+            const response = await fetch("https://lead-management-0z1r.onrender.com/api/leads", {
                 method: "POST",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify(values)
