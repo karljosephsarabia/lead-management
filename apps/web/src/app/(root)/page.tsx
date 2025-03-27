@@ -6,11 +6,6 @@ import fetchLeadListing from "@/utils/leadApi";
 import { useQuery } from "@tanstack/react-query";
 import { FormDialog } from "@/components/formDialog";
 import { Toaster } from "sonner";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Lead Management App",
-};
 
 
 const Home = () => {
