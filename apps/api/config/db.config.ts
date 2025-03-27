@@ -16,7 +16,6 @@ class Database {
     //Connects to the MongoDB database.
     async connect() {
         try {
-            console.log(this.uri);
             console.log("database connecting...");
             await mongoose.connect(this.uri);
             const dbState = mongoose.connection.readyState;
