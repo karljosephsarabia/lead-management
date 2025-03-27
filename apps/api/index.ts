@@ -8,11 +8,16 @@ dotenv.config();
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors")
+const cors = require("cors");
 
 const app = express();
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://lead-management-web.vercel.app/',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credential: true
+}));
 
 //Middleware
 app.use(express.json());
