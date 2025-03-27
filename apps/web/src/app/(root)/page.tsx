@@ -6,6 +6,11 @@ import fetchLeadListing from "@/utils/leadApi";
 import { useQuery } from "@tanstack/react-query";
 import { FormDialog } from "@/components/formDialog";
 import { Toaster } from "sonner";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Lead Management App",
+};
 
 
 const Home = () => {
@@ -17,7 +22,7 @@ const Home = () => {
     });
 
     if (isLoading) return <LoadingSpinner />;
-    if (error) return <p>{error.message}</p>
+    if (error) return <p>{error.message}</p>;
 
     return (
         <>

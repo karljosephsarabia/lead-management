@@ -31,7 +31,8 @@ export function AddLeadForm({ handleFormSubmit }: { handleFormSubmit: () => void
             });
 
             const resMessage = await response.json();
-            !response.ok ? toast.error(resMessage.message) : toast.success("Lead added successfully");
+            if (!response.ok) toast.error(resMessage.message)
+            if (response.ok) toast.success("Lead added successfully");
             handleFormSubmit();
             form.reset();
         } catch (err) {
