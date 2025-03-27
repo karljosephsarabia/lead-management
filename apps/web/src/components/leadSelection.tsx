@@ -17,7 +17,7 @@ export function LeadSelection({ field }: LeadSelectionProps) {
         <SelectGroup>
           <SelectItem value="New">New</SelectItem>
           <SelectItem value="Engaged">Engaged</SelectItem>
-          <SelectItem value="Proposal Send">Proposal Send</SelectItem>
+          <SelectItem value="Proposal Sent">Proposal Sent</SelectItem>
           <SelectItem value="Closed-Won">Closed Won</SelectItem>
           <SelectItem value="Closed-Lost">Closed Lost</SelectItem>
         </SelectGroup>

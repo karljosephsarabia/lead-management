@@ -4,7 +4,7 @@ import { MongoServerError } from "mongodb";
 
 
 const errorHandler = (err: any, req: Request, res: Response, next: NextFunction) => {
-
+    
     if (err instanceof ZodError) {
         return res.status(400).json({
             status: "error",
