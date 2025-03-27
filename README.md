@@ -1,84 +1,85 @@
-# Turborepo starter
+## Project Overview
+This project is a simple Lead Management System built using a TurboRepo. It demonstrates core skills in Next.js, Node.js, database handling, and API development. The goal is to create a fully functional Lead Manager with both backend and frontend components.
 
-This Turborepo starter is maintained by the Turborepo core team.
+## Technologies Used
+- **Frontend**: Next.js
+- **Backend**: Node.js/Express + TypeScript
+- **Database**: MongoDB
 
-## Using this example
+## How to Run the Project Locally
 
-Run the following command:
+### Prerequisites
+- **Node.js** (v16 or higher recommended)
+- **npm** or **yarn**
+- **TurboRepo** (if not installed, run `npm install turbo` or `yarn add turbo`)
 
-```sh
-npx create-turbo@latest
+### 1. Clone the Repository
+```bash
+git clone https://github.com/karljosephsarabia/lead-management.git
+cd lead-management
 ```
 
-## What's inside?
+### 2. Install Dependencies
+Navigate to the root directory and install all dependencies.
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```bash
+npm install
+# or
+yarn install
 ```
 
-### Develop
+### 3. Setup Environment Variables
+Create an account in **MongoDB Atlas** and create a `.env` file in the `apps/api` directory with the following variables:
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```env
+DB_ACCOUNT=your_account
+DB_PASSWORD=your_password
+DB_CLUSTER=your_cluster
+DB_NAME=your_db_name
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### 4. Run the Application
+Use TurboRepo to run both API and Web applications concurrently.
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+```bash
+npx turbo run dev
+```
+
+Alternatively, you can run each service individually.
+
+#### Run API
+```bash
+cd apps/api
+npm run dev
+# or
+yarn dev
+```
+
+#### Run Web
+```bash
+cd apps/web
+npm run dev
+# or
+yarn dev
+```
+
+### 5. Open in Browser
+The web application will typically run on:
 
 ```
-npx turbo link
+http://localhost:3000
 ```
 
-## Useful Links
+The API server will typically run on:
 
-Learn more about the power of Turborepo:
+```
+http://localhost:4000
+```
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+## Live Site
+- **Web:** [https://lead-management-web.vercel.app/](https://lead-management-web.vercel.app/)
+- **API:** [https://lead-management-0z1r.onrender.com](https://lead-management-0z1r.onrender.com)  
+(Note: Inactive project for free users can cause a request delay by 50 seconds or more.)
+
+
+**Thank you for reviewing this project!**
