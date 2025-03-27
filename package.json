@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "lead-management-turbo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
