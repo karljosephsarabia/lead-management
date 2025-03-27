@@ -13,10 +13,10 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors({
-    origin: 'https://lead-management-web.vercel.app/',
+    origin: 'https://lead-management-web.vercel.app',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credential: true
+    credentials: true
 }));
 
 //Middleware
